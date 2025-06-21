@@ -9,6 +9,10 @@ async function initConversation() {
   try {
     const tokenRes = await fetch('/session');
     const data = await tokenRes.json();
+    if (!data.client_secret || !data.client_secret.value) {
+      throw new Error(data.error || 'Failed to obtain session token');
+    }
+
     const EPHEMERAL_KEY = data.client_secret.value;
 
     const pc = new RTCPeerConnection();

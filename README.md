@@ -10,7 +10,12 @@ This project demonstrates a simple web application that connects to OpenAI's Rea
 OPENAI_API_KEY=sk-...
 ```
 
-2. Install dependencies (none are required beyond Node.js 18+ which provides `fetch`).
+2. Install dependencies:
+
+```
+npm install
+```
+
 
 3. Start the server:
 

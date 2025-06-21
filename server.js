@@ -1,8 +1,12 @@
 import http from 'http';
 import { readFile } from 'fs/promises';
 import { createReadStream, existsSync } from 'fs';
+import { config as loadEnv } from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+loadEnv();
+
 
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
