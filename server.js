@@ -8,6 +8,7 @@ import { fileURLToPath } from 'url';
 loadEnv();
 
 
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const PORT = process.env.PORT || 3000;
